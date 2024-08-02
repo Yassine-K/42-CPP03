@@ -9,6 +9,15 @@ ClapTrap::ClapTrap()
     std::cout << "ClapTrap created!" << std::endl;
 }
 
+ClapTrap::ClapTrap(std::string n, int h, int e, int d)
+{
+    name = n;
+    hp = h;
+    ep = e;
+    damage = 0;
+    std::cout << "ClapTrap created!" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string who)
 {
     name = who;
