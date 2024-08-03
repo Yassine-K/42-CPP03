@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 09:53:02 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/03 12:20:07 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/03 12:59:28 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@ int main(void)
 
     CS = AS;
     AS.attack("test");
-    AS.attack("test");
-    AS.attack("test");
-    AS.attack("test");
-    AS.attack("test");
-    AS.attack("test");
+  
     AS.beRepaired(5);
-    AS.takeDamage(1);
+    DS.takeDamage(1);
+    DS.guardGate();
+    DS.highFivesGuys();
+    DS.whoAmI();
     return 0;
 }
