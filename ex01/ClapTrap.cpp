@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/03 09:53:08 by ykhayri           #+#    #+#             */
+/*   Updated: 2024/08/03 11:18:25 by ykhayri          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
@@ -14,7 +26,7 @@ ClapTrap::ClapTrap(std::string n, int h, int e, int d)
     name = n;
     hp = h;
     ep = e;
-    damage = 0;
+    damage = d;
     std::cout << "ClapTrap created!" << std::endl;
 }
 
@@ -51,7 +63,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &clap)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called!" << std::endl;
+    std::cout << "ClapTrap destructor called!" << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target)
@@ -62,15 +74,14 @@ void ClapTrap::attack(const std::string &target)
         std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << damage << " points of damage!" << std::endl;
     }
     else
-        std::cout << (!hp ? "Dude, you're dead!" : "You've been wasting your energy, now suffer!") << std::endl;
+        std::cout << "ClapTrap " << name << (!hp ? ": Dude, you're dead!" : ": You've been wasting your energy, now suffer!") << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
     if (hp)
     {
-        hp += amount;
-        ep--;
+        hp -= amount;
         std::cout << "ClapTrap " << name << " took " << amount << " of damage!" << std::endl;
     }
     else
@@ -86,5 +97,5 @@ void ClapTrap::beRepaired(unsigned int amount)
         std::cout << "ClapTrap " << name << " repairs itself by " << amount << " points!" << std::endl;
     }
     else
-        std::cout << (!hp ? "Dude, you're dead!" : "You've been wasting your energy, now suffer!") << std::endl;
+        std::cout << "ClapTrap " << (!hp ? "Dude, you're dead!" : "You've been wasting your energy, now suffer!") << std::endl;
 }
