@@ -10,6 +10,7 @@ class ClapTrap
         int damage;
 
     public:
+    
         ClapTrap();
         ClapTrap(std::string);
         ClapTrap(const ClapTrap &);

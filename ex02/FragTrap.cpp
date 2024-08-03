@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 11:21:22 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/03 11:28:01 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/03 12:56:38 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ FragTrap::~FragTrap()
     std::cout << "FragTrap destructor called!" << std::endl;
 }
 
-void    FragTrap::highFivesGuys() {
+void    FragTrap::highFivesGuys() 
+{
     std::cout << "Give FragTrap a high five!" << std::endl;
 }
