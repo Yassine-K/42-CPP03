@@ -42,7 +42,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &clap)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called!" << std::endl;
+    std::cout << "ClapTrap destructor called!" << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target)
@@ -53,15 +53,14 @@ void ClapTrap::attack(const std::string &target)
         std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << damage << " points of damage!" << std::endl;
     }
     else
-        std::cout << (!hp ? "Dude, you're dead!" : "You've been wasting your energy, now suffer!") << std::endl;
+        std::cout << name << (!hp ? ": Dude, you're dead!" : ": You've been wasting your energy, now suffer!") << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
     if (hp)
     {
-        hp += amount;
-        ep--;
+        hp -= amount;
         std::cout << "ClapTrap " << name << " took " << amount << " of damage!" << std::endl;
     }
     else
